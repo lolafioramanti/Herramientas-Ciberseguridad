@@ -104,7 +104,10 @@ def display_tool_card(tool: Tool):
             st.button("⬇️ Descargar", key=f"download_{tool.name.replace(' ', '_')}", disabled=True, help="Placeholder - Agregar link real", use_container_width=True)
     
     with col2:
-        st.button("ℹ️ Info", key=f"info_{tool.name.replace(' ', '_')}", help="Más información sobre esta herramienta", use_container_width=True)
+        if tool.info_link:
+            st.link_button("ℹ️ Info", tool.info_link, use_container_width=True)
+        else:
+            st.button("ℹ️ Info", key=f"info_{tool.name.replace(' ', '_')}", help="Más información sobre esta herramienta", use_container_width=True)
 
 def display_category_stats():
     """Muestra estadísticas generales del baúl de herramientas"""
@@ -157,10 +160,9 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center; color: #6c757d; padding: 1rem;'>
-        <p>💡 <strong>Nota:</strong> Todas las herramientas mostradas son placeholders. 
-        Edita el archivo <code>data/tools_data.py</code> para agregar herramientas reales.</p>
-        <p>🔧 Para agregar una nueva herramienta, simplemente agrega un nuevo objeto <code>Tool</code> 
-        a la categoría correspondiente con nombre, descripción y link de descarga.</p>
+        <p><strong>Nota:</strong> Edita el archivo <code>data/tools_data.py</code> para agregar herramientas reales.</p>
+        <p>Para agregar una nueva herramienta, simplemente agrega un nuevo objeto <code>Tool</code> 
+        a la categoría correspondiente con nombre, descripción, link de descarga y link de documentación.</p>
     </div>
     """, unsafe_allow_html=True)
 
