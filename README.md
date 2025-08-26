@@ -30,20 +30,12 @@ Una aplicación Streamlit para organizar herramientas de seguridad y administrac
            Tool(
                name="Primera Herramienta",
                description="Descripción de la herramienta.",
-               download_link="https://ejemplo.com/descarga"
+               download_link="https://ejemplo.com/descarga",
+               info_link="https://ejemplo.com/docs"
            )
        ]
    )
    ```
-
-### Categorías iniciales
-
-- **Acceso Remoto**: TeamViewer, AnyDesk, Chrome Remote Desktop
-- **Antirrobo**: Prey Anti Theft, LoJack, Find My Device
-- **Firewall**: Windows Defender, ZoneAlarm, Comodo Firewall
-- **Análisis de Red**: Wireshark, Nmap, Netstat
-- **Seguridad**: Malwarebytes, Bitdefender, KeePass
-- **Monitoreo del Sistema**: Process Monitor, Task Manager Plus, System Information
 
 
 

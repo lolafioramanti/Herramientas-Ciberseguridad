@@ -158,13 +158,6 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.markdown("""
-    <div style='text-align: center; color: #6c757d; padding: 1rem;'>
-        <p><strong>Nota:</strong> Edita el archivo <code>data/tools_data.py</code> para agregar herramientas reales.</p>
-        <p>Para agregar una nueva herramienta, simplemente agrega un nuevo objeto <code>Tool</code> 
-        a la categoría correspondiente con nombre, descripción, link de descarga y link de documentación.</p>
-    </div>
-    """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
