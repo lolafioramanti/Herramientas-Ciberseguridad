@@ -8,6 +8,9 @@ Una aplicación Streamlit para organizar herramientas de seguridad y administrac
 - **Documentación y links de descarga**: Acceso a documentación pública de herramientas y fácil obtención de las mismas.
 - **Estadísticas**: Vista general del número de herramientas y categorías.
 
+<img width="2496" height="1278" alt="image" src="https://github.com/user-attachments/assets/c9366e92-e687-48eb-82c3-050be3fd19c4" />
+
+
 ## Personalización
 
 ### Agregar nuevas herramientas
