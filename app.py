@@ -37,6 +37,9 @@ st.markdown("""
         color: #d1e3e2; /* texto secundario claro */
         margin-bottom: 1rem;
         line-height: 1.5;
+        word-wrap: break-word;     /* 🔑 permite cortar palabras largas */
+        overflow-wrap: break-word; /* 🔑 asegura que no se salga */
+        white-space: normal;       /* 🔑 asegura saltos de línea */
     }
 
     /* Encabezado de categoría */
@@ -95,19 +98,32 @@ def display_tool_card(tool: Tool):
         <div class="tool-description">{tool.description}</div>
     </div>
     """, unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns([1, 1, 2])
+
+    # Dos columnas iguales para que los botones queden lado a lado
+    col1, col2 = st.columns([1, 1])
+
     with col1:
         if tool.download_link != "#":
             st.link_button("⬇️ Descargar", tool.download_link, use_container_width=True)
         else:
-            st.button("⬇️ Descargar", key=f"download_{tool.name.replace(' ', '_')}", disabled=True, help="Placeholder - Agregar link real", use_container_width=True)
-    
+            st.button(
+                "⬇️ Descargar",
+                key=f"download_{tool.name.replace(' ', '_')}",
+                disabled=True,
+                help="Placeholder - Agregar link real",
+                use_container_width=True
+            )
+
     with col2:
         if tool.info_link:
             st.link_button("ℹ️ Info", tool.info_link, use_container_width=True)
         else:
-            st.button("ℹ️ Info", key=f"info_{tool.name.replace(' ', '_')}", help="Más información sobre esta herramienta", use_container_width=True)
+            st.button(
+                "ℹ️ Info",
+                key=f"info_{tool.name.replace(' ', '_')}",
+                help="Más información sobre esta herramienta",
+                use_container_width=True
+            )
 
 def display_category_stats():
     """Muestra estadísticas generales del baúl de herramientas"""
