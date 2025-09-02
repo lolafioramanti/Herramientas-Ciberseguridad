@@ -139,6 +139,12 @@ tools_data: List[ToolCategory] = [
                 description="Herramienta de monitoreo de redes inalámbricas. Detecta redes WiFi y dispositivos cercanos, incluso redes ocultas o no anunciadas. Es usada en auditorías de seguridad WiFi, wardriving y pruebas de penetración en redes inalámbricas.",
                 download_link="https://www.kismetwireless.net/download",
                 info_link="https://www.kismetwireless.net"
+            ),
+            Tool(
+                name="Snort",
+                description= "Snort es un sistema de detección y prevención de intrusiones (IDS/IPS) de código abierto, desarrollado por Cisco. Analiza el tráfico de red en tiempo real para identificar ataques, intentos de explotación o actividades sospechosas mediante reglas y firmas de seguridad.",
+                download_link="https://www.snort.org/downloads",
+                info_link="https://www.snort.org/"
             )
         ]
     ),
@@ -203,6 +209,12 @@ tools_data: List[ToolCategory] = [
                 description="Gestor de contraseñas multiplataforma con enfoque en la nube. Permite sincronizar credenciales entre dispositivos de manera segura, soporta 2FA, bóvedas compartidas y almacenamiento cifrado. Al ser open source, es muy utilizado por empresas y usuarios particulares como alternativa a LastPass o 1Password.",
                 download_link="https://bitwarden.com/download/",
                 info_link="https://bitwarden.com"
+            ),
+            Tool(
+                name="Dashlane",
+                description= "Dashlane es un gestor de contraseñas que permite almacenar, generar y autocompletar claves de manera segura en distintos dispositivos. Utiliza cifrado avanzado y una contraseña maestra para proteger la información del usuario, además de ofrecer funciones extra como monitoreo de brechas de seguridad y autocompletado de datos.",
+                download_link="https://microsoftedge.microsoft.com/addons/detail/dashlane-%E2%80%94-administrador-/gehmmocbbkpblljhkekmfhjpfbkclbph",
+                info_link="https://www.dashlane.com/es"
             )
         ]
     ),
